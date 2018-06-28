@@ -76,9 +76,9 @@ database.ref().on("child_added", function (childSnapshot) {
     var nextTrain = moment().add(nextTrainMinutes, "minutes");
     var nextTrainClean = moment(nextTrain).format("h:mm A");
 
-    if (nextTrainMinutes === 5) {
+    if (nextTrainMinutes === 1) {
         nextTrainMinutes = "Arriving Now";
-        nextTrainClean = moment().format("h:mm A")
+        // nextTrainClean = moment().format("h:mm A")
     }
 
     var newRow = $("<tr>").append(
